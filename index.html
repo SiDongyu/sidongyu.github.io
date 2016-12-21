@@ -144,26 +144,98 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-photo/tflower_1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-android/SpannableStringBuilder" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/13/photo/tflower_1/">司雨烂片---昙花绽放</a>
+      <a class="article-title" href="/2016/12/21/android/SpannableStringBuilder/">强大的SpannableString</a>
     </h1>
   
 
-        <a href="/2016/12/13/photo/tflower_1/" class="archive-article-date">
-  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
+        <a href="/2016/12/21/android/SpannableStringBuilder/" class="archive-article-date">
+  	<time datetime="2016-12-20T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-21</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div align="center"><br>    <img src="http://of9ve7emb.bkt.clouddn.com/tanflower.jpg" width="500" height="300" alt="昙花绽放" align="center"><br><br></div>
-
+        <p>#SpannableString中最重要的方法就是 setSapan()方法了，有一个参数what是这个方法的精髓。</p>
+<p>##what：</p>
+<ul>
+<li><p>BackgroundColorSpan : 文本背景色</p>
+</li>
+<li><p>ForegroundColorSpan : 文本颜色</p>
+</li>
+<li><p>MaskFilterSpan : 修饰效果，如模糊(BlurMaskFilter)浮雕</p>
+</li>
+<li><p>RasterizerSpan : 光栅效果</p>
+</li>
+<li><p>StrikethroughSpan : 删除线</p>
+</li>
+<li><p>SuggestionSpan : 相当于占位符</p>
+</li>
+<li><p>UnderlineSpan : 下划线</p>
+</li>
+<li><p>AbsoluteSizeSpan : 文本字体（绝对大小）</p>
+</li>
+<li><p>DynamicDrawableSpan : 设置图片，基于文本基线或底部对齐。</p>
+</li>
+<li><p>ImageSpan : 图片</p>
+</li>
+<li><p>RelativeSizeSpan : 相对大小（文本字体）</p>
+</li>
+<li><p>ScaleXSpan : 基于x轴缩放</p>
+</li>
+<li><p>StyleSpan : 字体样式：粗体、斜体等</p>
+</li>
+<li><p>SubscriptSpan : 下标（数学公式会用到）</p>
+</li>
+<li><p>SuperscriptSpan : 上标（数学公式会用到）</p>
+</li>
+<li><p>TextAppearanceSpan : 文本外貌（包括字体、大小、样式和颜色）</p>
+</li>
+<li><p>TypefaceSpan : 文本字体</p>
+</li>
+<li><p>URLSpan : 文本超链接</p>
+</li>
+<li><p>ClickableSpan : 点击事件</p>
+</li>
+</ul>
+<p>###TextAppearanceSpan(String family, int style, int size, ColorStateList color, ColorStateList linkColor)</p>
+<ul>
+<li><p>family:</p>
+<ul>
+<li><p>monospace</p>
+</li>
+<li><p>serif 一般都选这个</p>
+</li>
+<li><p>sans-serif</p>
+</li>
+</ul>
+</li>
+<li><p>style:</p>
+<ul>
+<li><p>Typeface.NORMAL     正常</p>
+</li>
+<li><p>Typeface.BOLD     加粗</p>
+</li>
+<li><p>Typeface.ITALIC     斜体</p>
+</li>
+<li><p>Typeface.BOLD_ITALIC    加粗斜体</p>
+</li>
+</ul>
+</li>
+<li><p>size 文字大小</p>
+</li>
+<li><p>color 字体颜色selector </p>
+<pre><code>context.getColorStateList(R.color....) M以上的
+ColorState.createFromXml(context.getResources(),context.getResources().getXml(R.color.selector_apperarance_span)
+</code></pre></li>
+<li>linkColor</li>
+</ul>
 
       
 
@@ -174,14 +246,14 @@
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
 	</div>
 
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/13/photo/tflower_1/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/12/21/android/SpannableStringBuilder/">展开全文 >></a>
         </p>
       
 
@@ -308,6 +380,61 @@
 
 
   
+    <article id="post-photo/tflower_1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/13/photo/tflower_1/">司雨烂片---昙花绽放</a>
+    </h1>
+  
+
+        <a href="/2016/12/13/photo/tflower_1/" class="archive-article-date">
+  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div align="center"><br>    <img src="http://of9ve7emb.bkt.clouddn.com/tanflower.jpg" width="500" height="300" alt="昙花绽放" align="center"><br><br></div>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/13/photo/tflower_1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
   
 
 
@@ -360,6 +487,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">android</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">照片</a>
