@@ -6,17 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://sidongyu.com">
-  <title>Tag: 照片 | 司雨</title>
+  <title>calendar判断 long时间是否是本周 | 司雨</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="start from zero">
-<meta property="og:type" content="website">
-<meta property="og:title" content="司雨">
-<meta property="og:url" content="http://sidongyu.com/tags/照片/index.html">
+  <meta name="description" content="工具类
+直接上代码 别人的代码上面做了一些小改动。适合自己的项目吧
+public class DateUtils {
+    /**
+     * 判断所给时间是否是本周
+     */
+    public static boolean isThisWeek(long time) {
+        Calendar calendar = Calendar.getInstance();">
+<meta property="og:type" content="article">
+<meta property="og:title" content="calendar判断 long时间是否是本周">
+<meta property="og:url" content="http://sidongyu.com/2017/01/03/android/时间工具类判断是否是本周/index.html">
 <meta property="og:site_name" content="司雨">
-<meta property="og:description" content="start from zero">
+<meta property="og:description" content="工具类
+直接上代码 别人的代码上面做了一些小改动。适合自己的项目吧
+public class DateUtils {
+    /**
+     * 判断所给时间是否是本周
+     */
+    public static boolean isThisWeek(long time) {
+        Calendar calendar = Calendar.getInstance();">
+<meta property="og:updated_time" content="2017-01-03T06:47:58.807Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="司雨">
-<meta name="twitter:description" content="start from zero">
+<meta name="twitter:title" content="calendar判断 long时间是否是本周">
+<meta name="twitter:description" content="工具类
+直接上代码 别人的代码上面做了一些小改动。适合自己的项目吧
+public class DateUtils {
+    /**
+     * 判断所给时间是否是本周
+     */
+    public static boolean isThisWeek(long time) {
+        Calendar calendar = Calendar.getInstance();">
   
     <link rel="alternative" href="/atom.xml" title="司雨" type="application/atom+xml">
   
@@ -142,118 +164,193 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-android/时间工具类判断是否是本周" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      calendar判断 long时间是否是本周
+    </h1>
+  
+
+        <a href="/2017/01/03/android/时间工具类判断是否是本周/" class="archive-article-date">
+  	<time datetime="2017-01-03T06:26:22.343Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-03</time>
+</a>
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h1><hr>
+<p>直接上代码 别人的代码上面做了一些小改动。适合自己的项目吧</p>
+<pre><code>public class DateUtils {
+    /**
+     * 判断所给时间是否是本周
+     */
+    public static boolean isThisWeek(long time) {
+        Calendar calendar = Calendar.getInstance();
+        int currentWeek = calendar.get(Calendar.WEEK_OF_YEAR);
+        int currentDay_of_Year = calendar.get(Calendar.DAY_OF_YEAR);
+        calendar.setTime(new Date(time));
+        int paramWeek = calendar.get(Calendar.WEEK_OF_YEAR);
+        int paramDay_of_Week = calendar.get(Calendar.DAY_OF_WEEK);
+        int paramDay_of_Year = calendar.get(Calendar.DAY_OF_YEAR);
+
+         if (paramWeek == currentWeek) {
+             if (paramDay_of_Week == 1) {//如果是周日
+                return false;
+            }
+            return true;
+        }
+
+        if (currentWeek-paramWeek =1 &amp;&amp; paramDay_of_Week == 1) {
+            return true;
+        }
+
+        // 中国一周的开始是星期一 外国一周的开始是星期二，所以代码是外国人写的
+
+        return false;
+    }
+    //判断选择的日期是否是今天
+    public static boolean isToday(long time)
+    {
+        return isThisTime(time,&quot;yyyy-MM-dd&quot;);
+    }
+    //判断选择的日期是否是本月
+    public static boolean isThisMonth(long time)
+    {
+        return isThisTime(time,&quot;yyyy-MM&quot;);
+    }
+    private static boolean isThisTime(long time,String pattern) {
+        Date date = new Date(time);
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        String param = sdf.format(date);//参数时间
+        String now = sdf.format(new Date());//当前时间
+        if(param.equals(now)){
+            return true;
+        }
+        return false;
+    }
+
+}
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/mipmap/wx/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/13/photo/mazha/" class="archive-article-date">
-  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/13/photo/mazha/">司雨烂片---蚂蚱</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://sidongyu.com/2017/01/03/android/时间工具类判断是否是本周/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/13/photo/tflowercenter/" class="archive-article-date">
-  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/13/photo/tflowercenter/">司雨烂片---昙花花蕊</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/13/photo/tflower_1/" class="archive-article-date">
-  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/13/photo/tflower_1/">司雨烂片---昙花绽放</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/01/03/android/greendao使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">greenDao使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
+</nav>
 
-    
+
+
+
+
+
+
 
 
           </div>
@@ -276,9 +373,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

@@ -6,17 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://sidongyu.com">
-  <title>司雨烂片---昙花绽放 | 司雨</title>
+  <title>greenDao使用 | 司雨</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="司雨烂片---昙花绽放">
-<meta property="og:url" content="http://sidongyu.com/2016/12/13/photo/tflower_1/index.html">
+  <meta name="description" content="greenDao网上关于greendao一大堆，什么内存好呀，什么速度快啊。。。感觉都是原文翻译，我是感觉没有想象中的那样困难
+- 第一步 配置project曾的build.gradlebuildscript {
+          repositories {
+              jcenter()
+          }
+
+          dependencies {">
+<meta property="og:type" content="article">
+<meta property="og:title" content="greenDao使用">
+<meta property="og:url" content="http://sidongyu.com/2017/01/03/android/greendao使用/index.html">
 <meta property="og:site_name" content="司雨">
-<meta property="og:image" content="http://of9ve7emb.bkt.clouddn.com/tanflower.jpg">
-<meta property="og:updated_time" content="2016-12-16T06:18:56.083Z">
+<meta property="og:description" content="greenDao网上关于greendao一大堆，什么内存好呀，什么速度快啊。。。感觉都是原文翻译，我是感觉没有想象中的那样困难
+- 第一步 配置project曾的build.gradlebuildscript {
+          repositories {
+              jcenter()
+          }
+
+          dependencies {">
+<meta property="og:updated_time" content="2017-01-03T06:26:01.685Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="司雨烂片---昙花绽放">
-<meta name="twitter:image" content="http://of9ve7emb.bkt.clouddn.com/tanflower.jpg">
+<meta name="twitter:title" content="greenDao使用">
+<meta name="twitter:description" content="greenDao网上关于greendao一大堆，什么内存好呀，什么速度快啊。。。感觉都是原文翻译，我是感觉没有想象中的那样困难
+- 第一步 配置project曾的build.gradlebuildscript {
+          repositories {
+              jcenter()
+          }
+
+          dependencies {">
   
     <link rel="alternative" href="/atom.xml" title="司雨" type="application/atom+xml">
   
@@ -142,26 +161,262 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-photo/tflower_1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-android/greendao使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      司雨烂片---昙花绽放
+      greenDao使用
     </h1>
   
 
-        <a href="/2016/12/13/photo/tflower_1/" class="archive-article-date">
-  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
+        <a href="/2017/01/03/android/greendao使用/" class="archive-article-date">
+  	<time datetime="2017-01-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-03</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div align="center"><br>    <img src="http://of9ve7emb.bkt.clouddn.com/tanflower.jpg" width="500" height="300" alt="昙花绽放" align="center"><br><br></div>
+        <h1 id="greenDao"><a href="#greenDao" class="headerlink" title="greenDao"></a>greenDao</h1><h2 id="网上关于greendao一大堆，什么内存好呀，什么速度快啊。。。感觉都是原文翻译，我是感觉没有想象中的那样困难"><a href="#网上关于greendao一大堆，什么内存好呀，什么速度快啊。。。感觉都是原文翻译，我是感觉没有想象中的那样困难" class="headerlink" title="网上关于greendao一大堆，什么内存好呀，什么速度快啊。。。感觉都是原文翻译，我是感觉没有想象中的那样困难"></a>网上关于greendao一大堆，什么内存好呀，什么速度快啊。。。感觉都是原文翻译，我是感觉没有想象中的那样困难</h2><hr>
+<h3 id="第一步-配置project曾的build-gradle"><a href="#第一步-配置project曾的build-gradle" class="headerlink" title="- 第一步 配置project曾的build.gradle"></a>- 第一步 配置project曾的build.gradle</h3><pre><code>buildscript {
+          repositories {
+              jcenter()
+          }
 
+          dependencies {
+              classpath &apos;com.android.tools.build:gradle:2.2.1&apos;
+              classpath &apos;org.greenrobot:greendao-gradle-plugin:3.1.0&apos;
+              classpath &apos;com.neenbedankt.gradle.plugins:android-apt:1.8&apos;
+              // NOTE: Do not place your application dependencies here; they belong
+              // in the individual module build.gradle files
+          }
+      }
+
+      allprojects {
+          repositories {
+              jcenter()
+          }
+      }
+
+      task clean(type: Delete) {
+          delete rootProject.buildDir
+      }
+</code></pre><ul>
+<li>第二步 配置自己项目</li>
+<li><pre><code>apply plugin: &apos;com.android.application&apos;
+apply plugin: &apos;org.greenrobot.greendao&apos; //这个要有 使用插件的，会自动生成管理类
+android {
+    compileSdkVersion 25
+    buildToolsVersion &quot;25.0.0&quot;
+    defaultConfig {
+        applicationId &quot;com.snailf.ga.saccountbook&quot;
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName &quot;1.0&quot;
+        testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;
+        }
+    }
+    greendao {
+        schemaVersion 4 //数据库版本
+        targetGenDir &apos;src/main/java&apos;// DaoMaster DaoSession Dao文件创建的地方 最好放在/main/java下，会报找不到文件错误
+    }
+    repositories {
+        flatDir {
+            dirs &apos;libs&apos;
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: [&apos;*.jar&apos;], dir: &apos;libs&apos;)
+    compile &apos;com.alibaba:fastjson:1.2.11&apos;
+    compile &apos;com.android.support:appcompat-v7:25.0.0&apos;
+    compile &apos;org.greenrobot:greendao:3.1.0&apos;        //添加依赖greendao
+    compile &apos;com.jakewharton:butterknife:7.0.0&apos;
+    compile &apos;com.android.support:design:25.0.0&apos;
+    compile &apos;com.android.support:support-v4:25.0.0&apos;
+    compile(name: &apos;WheelPicker&apos;, ext: &apos;aar&apos;)
+}
+</code></pre></li>
+<li><p>第三步 编写bean类</p>
+<pre><code>@Entity //生成session和dao的标识 ，没有他就不会生成
+public class AccountInfo {
+    @Id(autoincrement = true)//主键 自动增长
+    private Long id;
+    //剩下的都是一些 平平常常的字段
+    @Property(nameInDb = &quot;ACCOUNTTYPE&quot;)
+    private String accountType;
+    @Property(nameInDb = &quot;AMOUNT&quot;)
+    private long amount;
+    @Property(nameInDb = &quot;TYPE&quot;)
+    private int type;
+    @Property(nameInDb = &quot;DATE&quot;)
+    private long date;
+    @Property(nameInDb = &quot;REMARK&quot;)
+    private String remark;
+    @ToOne(joinProperty = &quot;id&quot;)//一对一 根据id查询另外一个数据库
+    private BaseType baseType;
+}
+</code></pre></li>
+</ul>
+<ul>
+<li><p>第四步 rebuild project，这下你就可以看到生成session和 dao了</p>
+<pre><code>rebuild之后会生成构造方法和setter 俺的 getter方法。如果想要修改字段的类型，或者增加字段，那么就把生成的那些东西，都删了，然后
+加上自己想加的，改了自己想改的，重新rebuild，但是这样之前保存的数据就没了。。。
+</code></pre></li>
+<li><p>第五步 创建数据库manager</p>
+</li>
+</ul>
+<pre><code>    public class DateBaseDaoManager {
+        private final static String dbName = &quot;account_db&quot;;
+        private static DateBaseDaoManager mInstance;
+        private DaoMaster.DevOpenHelper openHelper;
+        private Context context;
+
+
+        public DateBaseDaoManager(Context context) {
+            this.context = context;
+            openHelper = new DaoMaster.DevOpenHelper(context, dbName, null);
+        }
+
+        /**
+         * 获取单例引用
+         *
+         * @param context
+         * @return
+         */
+        public static DateBaseDaoManager getInstance(Context context) {
+            if (mInstance == null) {
+                synchronized (DateBaseDaoManager.class) {
+                    if (mInstance == null) {
+                        mInstance = new DateBaseDaoManager(context);
+                    }
+                }
+            }
+            return mInstance;
+        }
+
+        /**
+         * 获取可读数据库
+         */
+        private SQLiteDatabase getReadableDatabase() {
+            if (openHelper == null) {
+                openHelper = new DaoMaster.DevOpenHelper(context, dbName, null);
+            }
+            SQLiteDatabase db = openHelper.getReadableDatabase();
+            return db;
+        }
+
+
+        /**
+         * 获取可写数据库
+         */
+        private SQLiteDatabase getWritableDatabase() {
+            if (openHelper == null) {
+                openHelper = new DaoMaster.DevOpenHelper(context, dbName, null);
+            }
+            SQLiteDatabase db = openHelper.getWritableDatabase();
+            return db;
+        }
+    /========================================收入类型增删改查=======================
+        /**
+         * 插入一条 type
+         */
+        public long insertType(BaseType baseType){
+            return getTypeDao().insert(baseType);
+        }
+
+
+        /**
+         * 插入或者修改一条 type
+         */
+        public long insertOrUpdateType(BaseType baseType){
+            return getTypeDao().insertOrReplace(baseType);
+        }
+
+        /**
+         * 删除一条 type
+         */
+        public void delType(BaseType baseType){
+            getTypeDao().delete(baseType);
+        }
+
+        /**
+         * 查询所有的 type
+         */
+        public List&lt;BaseType&gt; queryTypeList(){
+            return  getTypeDao().queryBuilder().list();
+        }
+        //================================收支信息的增删改查============================
+
+        /**
+         * 查询 账单 通过id
+         */
+        public AccountInfo queryOrderById(long id) {
+            if (!TextUtils.isEmpty(id + &quot;&quot;)) {
+                return getOrderDao().load(id);
+            }
+            return null;
+        }
+
+        /**
+         * 插入或者修改一条 收支信息
+         */
+        public long insertOrUpdateOrder(AccountInfo accountInfo){
+            return getOrderDao().insertOrReplace(accountInfo);
+        }
+        /**
+         * 插入 收支信息
+         */
+        public long insertOrder(AccountInfo accountInfo){
+            return getOrderDao().insert(accountInfo);
+        }
+
+        /**
+         * 删除一条 收支信息
+         */
+        public void delOrder(AccountInfo accountInfo){
+            getOrderDao().delete(accountInfo);
+        }
+
+        /**
+         * 查询所有的 收支信息
+         */
+        public List&lt;AccountInfo&gt; queryOrderList(){
+           return getOrderDao().queryBuilder().list();
+        }
+
+    //====================================获取数据操作的dao=====================================
+
+
+        /**
+         * 收支信息的dao
+         */
+        public BaseTypeDao getTypeDao() {
+            DaoMaster daoMaster = new DaoMaster(getWritableDatabase());
+            DaoSession daoSession = daoMaster.newSession();
+            return daoSession.getBaseTypeDao();
+        }
+
+        /**
+         * 收支信息的dao
+         */
+        public AccountInfoDao getOrderDao() {
+            DaoMaster daoMaster = new DaoMaster(getWritableDatabase());
+            DaoSession daoSession = daoMaster.newSession();
+            return daoSession.getAccountInfoDao();
+        }
+
+} 
+</code></pre><p>====================greendao3.0 不像之前那样配置麻烦了，之前还有那样，还要这样的，看着就烦人，就一代而过了================</p>
 
       
 
@@ -198,7 +453,7 @@
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
 	</div>
 
       
@@ -251,7 +506,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://sidongyu.com/2016/12/13/photo/tflower_1/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://sidongyu.com/2017/01/03/android/greendao使用/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -265,15 +520,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/12/13/photo/tflowercenter/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/01/03/android/时间工具类判断是否是本周/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          司雨烂片---昙花花蕊
+          calendar判断 long时间是否是本周
         
       </div>
     </a>
   
+  
+    <a href="/2016/12/21/android/SpannableStringBuilder/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">强大的SpannableString</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
