@@ -26,7 +26,7 @@
           }
 
           dependencies {">
-<meta property="og:updated_time" content="2017-01-04T07:19:04.562Z">
+<meta property="og:updated_time" content="2017-01-04T07:23:39.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="greenDao使用">
 <meta name="twitter:description" content="greenDao网上关于greendao一大堆，什么内存好呀，什么速度快啊。。。感觉都是原文翻译，我是感觉没有想象中的那样困难
@@ -204,7 +204,8 @@
           delete rootProject.buildDir
       }
 </code></pre><ul>
-<li><p>第二步 配置自己项目</p>
+<li>第二步 配置自己项目</li>
+</ul>
 <pre><code>apply plugin: &apos;com.android.application&apos;
 apply plugin: &apos;org.greenrobot.greendao&apos; //这个要有 使用插件的，会自动生成管理类
 android {
@@ -245,8 +246,9 @@ dependencies {
     compile &apos;com.android.support:support-v4:25.0.0&apos;
     compile(name: &apos;WheelPicker&apos;, ext: &apos;aar&apos;)
 }
-</code></pre></li>
-<li><p>第三步 编写bean类</p>
+</code></pre><ul>
+<li>第三步 编写bean类</li>
+</ul>
 <pre><code>@Entity //生成session和dao的标识 ，没有他就不会生成
 public class AccountInfo {
     @Id(autoincrement = true)//主键 自动增长
@@ -265,15 +267,13 @@ public class AccountInfo {
     @ToOne(joinProperty = &quot;id&quot;)//一对一 根据id查询另外一个数据库
     private BaseType baseType;
 }
-</code></pre></li>
+</code></pre><ul>
+<li>第四步 rebuild project，这下你就可以看到生成session和 dao了</li>
 </ul>
-<ul>
-<li><p>第四步 rebuild project，这下你就可以看到生成session和 dao了</p>
 <pre><code>rebuild之后会生成构造方法和setter 俺的 getter方法。如果想要修改字段的类型，或者增加字段，那么就把生成的那些东西，都删了，然后
 加上自己想加的，改了自己想改的，重新rebuild，但是这样之前保存的数据就没了。。。
-</code></pre></li>
-<li><p>第五步 创建数据库manager</p>
-</li>
+</code></pre><ul>
+<li>第五步 创建数据库manager</li>
 </ul>
 <pre><code>    public class DateBaseDaoManager {
         private final static String dbName = &quot;account_db&quot;;
