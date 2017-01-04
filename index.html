@@ -144,6 +144,118 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-android/diolog从底部弹出" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/04/android/diolog从底部弹出/">dialog从底部弹出来</a>
+    </h1>
+  
+
+        <a href="/2017/01/04/android/diolog从底部弹出/" class="archive-article-date">
+  	<time datetime="2017-01-04T07:39:36.904Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-04</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>先自定义dialog，在oncreat方法中加上如下代码</li>
+</ul>
+<pre><code>            @Override
+            protected void onCreate(Bundle bundle) {
+                super.onCreate(bundle);
+                getWindow().setGravity(Gravity.BOTTOM); //显示在底部
+                WindowManager m = getWindow().getWindowManager();
+                Display d = m.getDefaultDisplay();
+                WindowManager.LayoutParams p = getWindow().getAttributes();
+                p.width = d.getWidth(); //设置dialog的宽度为当前手机屏幕的宽度
+                p.height = (int) (d.getHeight() / 2.7);//设置当前dialog的高度是屏幕的一半
+                getWindow().setWindowAnimations(R.style.dialogstyle); // 添加动画
+                getWindow().setAttributes(p);
+            }
+
+
+- 动画
+
+
+
+        `     &lt;style name=&quot;dialogstyle&quot; parent=&quot;android:Animation&quot;&gt;
+            &lt;item name=&quot;@android:windowEnterAnimation&quot;&gt;@anim/dialog_enter&lt;/item&gt;
+            &lt;item name=&quot;@android:windowExitAnimation&quot;&gt;@anim/dialog_exit&lt;/item&gt;
+            &lt;/style&gt; `
+
+
+- 在res下面创建anim文件夹
+
+
+
+
+        `    &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+            &lt;set xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+                &lt;translate
+                    android:duration=&quot;400&quot;
+                    android:fromYDelta=&quot;100%p&quot; /&gt;
+            &lt;/set&gt;`
+        enter
+
+
+        `    &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+            &lt;set xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+                &lt;translate
+                    android:duration=&quot;400&quot;
+                    android:toYDelta=&quot;100%p&quot; /&gt;
+            &lt;/set&gt;`
+        exit
+</code></pre><hr>
+<p>一开始我以为就这么简单的事情，结果一显示就傻了，还有不贴边<br>我就百度查啊查的，终于找到解决办法</p>
+<h1 id="在构造方法中给dialog加上自己的style"><a href="#在构造方法中给dialog加上自己的style" class="headerlink" title="在构造方法中给dialog加上自己的style"></a>在构造方法中给dialog加上自己的style</h1><pre><code>public BottomScrollDialog(Context context) {
+    super(context, R.style.my_dialog);
+    requestWindowFeature(Window.FEATURE_NO_TITLE);
+    super.setContentView(view);
+}
+</code></pre><h1 id="style代码"><a href="#style代码" class="headerlink" title="style代码"></a>style代码</h1><pre><code>&lt;style name=&quot;my_dialog&quot;&gt;
+    &lt;item name=&quot;android:windowNoTitle&quot;&gt;true&lt;/item&gt;
+    &lt;item name=&quot;android:backgroundDimEnabled&quot;&gt;true&lt;/item&gt;
+&lt;/style&gt;
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/04/android/diolog从底部弹出/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-android/时间工具类判断是否是本周" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -665,6 +777,60 @@ ColorState.createFromXml(context.getResources(),context.getResources().getXml(R.
 
 
   
+    <article id="post-photo/tflowercenter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/13/photo/tflowercenter/">司雨烂片---昙花花蕊</a>
+    </h1>
+  
+
+        <a href="/2016/12/13/photo/tflowercenter/" class="archive-article-date">
+  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div align="center"><br>    <img src="http://of9ve7emb.bkt.clouddn.com/flowercenter.jpg" width="500" height="500" alt="昙花花心" align="center"><br><br></div>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/13/photo/tflowercenter/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-photo/mazha" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -758,60 +924,6 @@ ColorState.createFromXml(context.getResources(),context.getResources().getXml(R.
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/12/13/photo/tflower_1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-photo/tflowercenter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/13/photo/tflowercenter/">司雨烂片---昙花花蕊</a>
-    </h1>
-  
-
-        <a href="/2016/12/13/photo/tflowercenter/" class="archive-article-date">
-  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <div align="center"><br>    <img src="http://of9ve7emb.bkt.clouddn.com/flowercenter.jpg" width="500" height="500" alt="昙花花心" align="center"><br><br></div>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/13/photo/tflowercenter/">展开全文 >></a>
         </p>
       
 
