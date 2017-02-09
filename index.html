@@ -144,6 +144,107 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-日常记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/09/日常记录/">日常记录</a>
+    </h1>
+  
+
+        <a href="/2017/02/09/日常记录/" class="archive-article-date">
+  	<time datetime="2017-02-09T08:34:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-09</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>Airbnb炫酷的动画<ul>
+<li>AE做成动画装换成json文件（Bodymovin插件），json文件放到app/src/main/assets 目录下面</li>
+<li>引用 Lottie 开源库</li>
+</ul>
+</li>
+</ol>
+<pre><code>&lt;com.airbnb.lottie.LottieAnimationView
+   android:id=&quot;@+id/animation_view&quot;
+   android:layout_width=&quot;wrap_content&quot;
+   android:layout_height=&quot;wrap_content&quot;
+   app:lottie_fileName=&quot;hello-world.json&quot;
+   app:lottie_loop=&quot;true&quot;
+   app:lottie_autoPlay=&quot;true&quot; /&gt;
+</code></pre><ol>
+<li><p>studio 技巧</p>
+<ul>
+<li>分屏显示 右键主屏幕的选项卡（tab）选择 Split Vertically / Horizontally  现在改成alt+v alt+h</li>
+<li>关闭当前tap ctrl + f4</li>
+<li>close others = ctrl + shift + Q</li>
+<li>close all = ctrl +　shift + S</li>
+<li>拓展选中 = ctrl + W 快速选中小括号 大括号种的内容</li>
+<li>左一个tab = alt + ←</li>
+<li>右一个tab = alt + →</li>
+<li>隐藏所有窗口 = cmd + shift + F12 不常用</li>
+<li>以上键位都是由我自己定的键位</li>
+<li>如果需要 自己到 setting–keymap里面设置</li>
+</ul>
+</li>
+<li><p>轻量级的路由 LiteRouter</p>
+<ul>
+<li>什么是路由 ： 不同的请求地址会交给路由处理来转发给相应的控制器处理，所以说路由就可以在转发前修改转发地址，你可以在这上面大作文章。</li>
+<li>适用于团队协作开发</li>
+<li>原创作者的灵感：App端开发和后台开发就是独立的，他们是如何相互独立又互相配合的呢</li>
+</ul>
+</li>
+<li><p>回顾 Intent的flags 巧妙运用位运算符</p>
+<ul>
+<li>不同的 flag 对应不同的二进制位上面的1，也就是十进制数的1248</li>
+<li>当他们坐 |（或）的操作时，哪一个flag参与了 | 的操作，相应的位置上面就会使 1 ，这就能够标记到了 到底都有哪一个flag</li>
+<li>同理的老鼠问题 </li>
+<li>有1000桶酒，其中1桶有毒。而一旦吃了，毒性会在1周后发作。现在     我们用小老鼠做实验，要在1周后找<br>有1000桶酒，其中1桶有毒。而一旦吃了，毒性会在1周后发作。现在我们用小老鼠做实验，要在1周后找出那桶毒酒，最少需要多少老鼠？<br>（老鼠的使用量越少越好，注意，毒性1周后才会发作，而且一周后必   须出结果，所以时间紧迫） <br><br>A、1只<br><br>B、10只<br><br>C、100只<br><br>D、1000只     <ul>
+<li>答案<br><br>10只老鼠按顺序排好，每桶酒按照编号转换成二进制，给相应位置上是1的老鼠喝。最后按死掉的老鼠是哪几只，然后排成二进制，再转成十进制就是第几桶酒。<br>比如：第70桶酒，70转换成二进制就是0001000110，那么就给第四、八、九只老鼠喝。如果最后死掉第三、七、八只老鼠，那么就是0010001100，转换成十进制就是140，即140桶酒有毒。<br>(来自百度知道)<br>1000 装换成 2 进制 位数最多位 10位<br>每一个老鼠对应相应位置上面的 1 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/09/日常记录/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-android/diolog从底部弹出" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -832,6 +933,60 @@ ColorState.createFromXml(context.getResources(),context.getResources().getXml(R.
 
 
   
+    <article id="post-photo/tflowercenter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/13/photo/tflowercenter/">司雨烂片---昙花花蕊</a>
+    </h1>
+  
+
+        <a href="/2016/12/13/photo/tflowercenter/" class="archive-article-date">
+  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div align="center"><br>    <img src="http://of9ve7emb.bkt.clouddn.com/flowercenter.jpg" width="500" height="500" alt="昙花花心" align="center"><br><br></div>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/13/photo/tflowercenter/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-photo/tflower_1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -870,60 +1025,6 @@ ColorState.createFromXml(context.getResources(),context.getResources().getXml(R.
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/12/13/photo/tflower_1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-photo/tflowercenter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/13/photo/tflowercenter/">司雨烂片---昙花花蕊</a>
-    </h1>
-  
-
-        <a href="/2016/12/13/photo/tflowercenter/" class="archive-article-date">
-  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <div align="center"><br>    <img src="http://of9ve7emb.bkt.clouddn.com/flowercenter.jpg" width="500" height="500" alt="昙花花心" align="center"><br><br></div>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/13/photo/tflowercenter/">展开全文 >></a>
         </p>
       
 
@@ -993,6 +1094,10 @@ ColorState.createFromXml(context.getResources(),context.getResources().getXml(R.
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">笔记</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">android</a>
