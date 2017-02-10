@@ -144,6 +144,107 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-注解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/10/注解/">注解</a>
+    </h1>
+  
+
+        <a href="/2017/02/10/注解/" class="archive-article-date">
+  	<time datetime="2017-02-10T01:04:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-10</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>元注解 ： 修饰其他注解<ul>
+<li>@Target <ul>
+<li>修饰的对象范围：packages、types（类、接口、枚举、Annotation类型）、类型成员（方法、构造方法、成员变量、枚举值）、方法参数和本地变量（如循环变量、catch参数）。</li>
+<li>作用：用于描述注解的使用范围</li>
+<li>例如 @Target(ElementType.METHOD) 限定这个注解只能注解方法</li>
+<li>再比如 @Target(ElementType.PARAMETER) 限定了这个注解只能注解方法参数</li>
+<li>CONSTRUCTOR:用于描述构造器</li>
+<li>FIELD:用于描述域</li>
+<li>LOCAL_VARIABLE:用于描述局部变量</li>
+<li>METHOD:用于描述方法</li>
+<li>PACKAGE:用于描述包</li>
+<li>PARAMETER:用于描述参数</li>
+<li>TYPE:用于描述类、接口(包括注解类型) 或enum声明<ul>
+<li>@Retention</li>
+</ul>
+</li>
+<li>定义了该 Annotation 被保留的时间长短：某些 Annotation 仅出现在源代码中，而被编译器丢弃；而另一些却被编译在class文件中；编译在class文件中的Annotation可能会被虚拟机忽略，而另一些在class被装载时将被读取（请注意并不影响 class 的执行，因为Annotation 与 class 在使用上是被分离的）。使用这个meta-Annotation 可以对  Annotation 的“生命周    期”限制。</li>
+<li>作用：表示需要在什么级别保存该注释信息，用于描述注解的生命周期（即：被描述的注解在什么范围内有效）</li>
+<li>SOURCE:在源文件中有效（即源文件保留）</li>
+<li>CLASS:在class文件中有效（即class保留）</li>
+<li>RUNTIME:在运行时有效（即运行时保留）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>自定义注解</p>
+<ul>
+<li>通过元注解注解这个注解的使用范围，保留时间</li>
+<li>public 修饰 @interface</li>
+<li>返回值为基本参数类型</li>
+<li>如果只有一个参数最好用value</li>
+<li><p>注解的值获取</p>
+<ul>
+<li><p>方法1：<t extends="" annotation=""> T getAnnotation(Class<t> annotationClass): 返回改程序元素上存在的、指定类型的注解，如果该类型注解不存在，则返回null。</t></t></p>
+</li>
+<li><p>方法2：Annotation[] getAnnotations():返回该程序元素上存在的所有注解。</p>
+</li>
+<li><p>方法3：boolean is AnnotationPresent(Class&lt;?extends Annotation&gt; annotationClass):判断该程序元素上是否包含指定类型的注解，存在则返回true，否则返回false.</p>
+</li>
+<li><p>方法4：Annotation[] getDeclaredAnnotations()：返回直接存在于此元素上的所有注释。与此接口中的其他方法不同，该方法将忽略继承的注释。（如果没有注释直接存在于此元素上，则返回长度为零的一个数组。）该方法的调用者可以随意修改返回的数组；这不会对其他调用者返回的数组产生任何影响。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>注解的作用还需要多看 多练习，还没有形成系统的概念</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/10/注解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-日常记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -933,60 +1034,6 @@ ColorState.createFromXml(context.getResources(),context.getResources().getXml(R.
 
 
   
-    <article id="post-photo/tflowercenter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/13/photo/tflowercenter/">司雨烂片---昙花花蕊</a>
-    </h1>
-  
-
-        <a href="/2016/12/13/photo/tflowercenter/" class="archive-article-date">
-  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <div align="center"><br>    <img src="http://of9ve7emb.bkt.clouddn.com/flowercenter.jpg" width="500" height="500" alt="昙花花心" align="center"><br><br></div>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/13/photo/tflowercenter/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-photo/tflower_1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1025,6 +1072,60 @@ ColorState.createFromXml(context.getResources(),context.getResources().getXml(R.
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/12/13/photo/tflower_1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-photo/tflowercenter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/13/photo/tflowercenter/">司雨烂片---昙花花蕊</a>
+    </h1>
+  
+
+        <a href="/2016/12/13/photo/tflowercenter/" class="archive-article-date">
+  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div align="center"><br>    <img src="http://of9ve7emb.bkt.clouddn.com/flowercenter.jpg" width="500" height="500" alt="昙花花心" align="center"><br><br></div>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/照片/">照片</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/13/photo/tflowercenter/">展开全文 >></a>
         </p>
       
 
@@ -1097,6 +1198,10 @@ ColorState.createFromXml(context.getResources(),context.getResources().getXml(R.
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">java</a>
               </li>
              
               <li class="article-tag-list-item">
