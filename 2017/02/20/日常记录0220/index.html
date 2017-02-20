@@ -20,7 +20,7 @@ case 0:
 @Overridepublic void onItemClick(AdapterView&amp;lt;?&amp;gt; parent, View view, int position, long id) { switch (position) {
 case 0:
     startFragment(new CashierFragment());//收银的fragment">
-<meta property="og:updated_time" content="2017-02-20T01:55:21.715Z">
+<meta property="og:updated_time" content="2017-02-20T06:48:35.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日常记录0220">
 <meta name="twitter:description" content="代码改进方案，类似于以下代码
@@ -192,6 +192,7 @@ case 4:
 <p>}</p>
 </li>
 <li>要改成工厂的模式，并且不能用position当成判断条件，要有相对应的type类型</li>
+<li>在网上查询了，捕获全局异常UncaughtExceptionHandler实现里面的方法，但是无论如何都不能从这个handler里面重新启动activity。解决办法：发送消息给一个守护线程。让守护线程重新打开这个app</li>
 </ul>
 
       
