@@ -18,7 +18,7 @@ badgeView 购物车上面的显示数量的点点，微信，qq消息的点点�
 <meta property="og:description" content="android studio 中 gradle 的用法 https://gold.xitu.io/post/589d1036b123db16a3c6d6d1 gradle的全局变量的使用和一些使用
 badgeView 购物车上面的显示数量的点点，微信，qq消息的点点，可以拖拽删除等，粘性控件。
 打开app的时候会有一小段空白期，这个是activity的setContentView造成的，很耗时。">
-<meta property="og:updated_time" content="2017-02-16T02:36:59.747Z">
+<meta property="og:updated_time" content="2017-02-16T07:28:51.733Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日常记录">
 <meta name="twitter:description" content="android studio 中 gradle 的用法 https://gold.xitu.io/post/589d1036b123db16a3c6d6d1 gradle的全局变量的使用和一些使用
@@ -171,6 +171,8 @@ badgeView 购物车上面的显示数量的点点，微信，qq消息的点点�
 <li>android studio 中 gradle 的用法 <a href="https://gold.xitu.io/post/589d1036b123db16a3c6d6d1" target="_blank" rel="external">https://gold.xitu.io/post/589d1036b123db16a3c6d6d1</a> gradle的全局变量的使用和一些使用</li>
 <li>badgeView 购物车上面的显示数量的点点，微信，qq消息的点点，可以拖拽删除等，粘性控件。</li>
 <li>打开app的时候会有一小段空白期，这个是activity的setContentView造成的，很耗时。为了避免出现这个一段空白，就不需要执行setContentView方法。然后给app的theme设置windowBackGround方法。要通过代码动态设置app的theme，如果在xml中设置，图片资源不会被释放</li>
+<li>GridView的itemclick不能通过position位置来识别处理相应的动作，要通过position对应的type来识别</li>
+<li>常量类Constant，不要所有的常量类都放到一个Constant中，支付方式的放到PaymethodConst中，订单信息的要放到OrderConst中，另外一般这个常量类最好私有化构造方法</li>
 </ul>
 
       
@@ -274,6 +276,15 @@ badgeView 购物车上面的显示数量的点点，微信，qq消息的点点�
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/02/20/日常记录0220/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          日常记录0220
+        
+      </div>
+    </a>
   
   
     <a href="/2017/02/14/activity的onNewIntent方法/" id="article-nav-older" class="article-nav-link-wrap">
