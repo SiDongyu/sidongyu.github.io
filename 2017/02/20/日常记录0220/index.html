@@ -9,30 +9,30 @@
   <title>日常记录0220 | 司雨</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="代码改进方案，类似于以下代码
- @Override
-public void onItemClick(AdapterView&amp;lt;?&amp;gt; parent, View view, int position, long id) {
+
+  public void onItemClick(AdapterView&amp;lt;?&amp;gt; parent, View view, int position, long id) {
     switch (position) {
         case 0:
-            startFragment(new CashierFragmen">
+            startFragment(new CashierFragment());//收">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日常记录0220">
 <meta property="og:url" content="http://sidongyu.com/2017/02/20/日常记录0220/index.html">
 <meta property="og:site_name" content="司雨">
 <meta property="og:description" content="代码改进方案，类似于以下代码
- @Override
-public void onItemClick(AdapterView&amp;lt;?&amp;gt; parent, View view, int position, long id) {
+
+  public void onItemClick(AdapterView&amp;lt;?&amp;gt; parent, View view, int position, long id) {
     switch (position) {
         case 0:
-            startFragment(new CashierFragmen">
-<meta property="og:updated_time" content="2017-02-21T00:53:14.318Z">
+            startFragment(new CashierFragment());//收">
+<meta property="og:updated_time" content="2017-02-21T00:55:06.532Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日常记录0220">
 <meta name="twitter:description" content="代码改进方案，类似于以下代码
- @Override
-public void onItemClick(AdapterView&amp;lt;?&amp;gt; parent, View view, int position, long id) {
+
+  public void onItemClick(AdapterView&amp;lt;?&amp;gt; parent, View view, int position, long id) {
     switch (position) {
         case 0:
-            startFragment(new CashierFragmen">
+            startFragment(new CashierFragment());//收">
   
     <link rel="alternative" href="/atom.xml" title="司雨" type="application/atom+xml">
   
@@ -177,9 +177,9 @@ public void onItemClick(AdapterView&amp;lt;?&amp;gt; parent, View view, int posi
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><p>代码改进方案，类似于以下代码</p>
-<pre><code> @Override
-public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, long id) {
+<li>代码改进方案，类似于以下代码</li>
+</ul>
+<pre><code>  public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, long id) {
     switch (position) {
         case 0:
             startFragment(new CashierFragment());//收银的fragment
@@ -197,9 +197,8 @@ public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, lo
             startFragment(new SystemManagerFragment());//系统管理的fragment
             break;
     }
-
 }
-</code></pre></li>
+</code></pre><ul>
 <li>要改成工厂的模式，并且不能用position当成判断条件，要有相对应的type类型</li>
 <li>在网上查询了，捕获全局异常UncaughtExceptionHandler实现里面的方法，但是无论如何都不能从这个handler里面重新启动activity。解决办法：发送消息给一个守护线程。让守护线程重新打开这个app</li>
 </ul>
